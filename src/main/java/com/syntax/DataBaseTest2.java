@@ -15,8 +15,8 @@ public class DataBaseTest2 {
 
                 Statement statement =connection.createStatement();
 
-                ResultSet resultSet=statement.executeQuery("select firstname, lastname, age, city " +
-                        "from person where city is not null;");
+                String sqlQuery="select * from person;";
+                ResultSet resultSet=statement.executeQuery(sqlQuery);
 
                 // ResultSetMetaData - object that contains info about the result table
                 // info such as column names, number of columns
